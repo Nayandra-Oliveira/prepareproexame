@@ -1,0 +1,1410 @@
+/* =========================================
+   1. VARIÁVEIS GLOBAIS E TIPOGRAFIA BASE
+   ========================================= */
+
+html {
+  font-size: 16px; /* base para rem, o JS vai alterar isso */
+  --text-color: #151514;
+  --bg-color: #ffffff;
+
+  --title-font: "TT Ramillas", serif;
+  --body-font: "TT Ramillas", serif;
+
+  --brand: #10B981;
+  --brand-dark: #059669;
+  --muted: #6b7280;
+}
+
+body {
+  margin: 0;
+  color: var(--text-color);
+  font-family: var(--body-font);
+
+  /* fundo bem clarinho com imagem + véu branco por cima */
+  background:
+    linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.96)),
+    url("assets/photos/2.png") no-repeat center top fixed;
+  background-size: cover;
+}
+
+/* ALTO CONTRASTE*/
+
+/* =====================================================
+   MODO NOTURNO 2025 — COERENTE, CLÍNICO E PREMIUM
+   ===================================================== */
+
+html.hc {
+  --bg-color: #0D0E0E;
+  --surface: #161717;
+  --card-bg: #161717;
+  --border-soft: #2A2A2A;
+
+  --text-color: #F4F4F4;
+  --text-soft: #CFCFCF;
+
+  --accent: #10B981;
+}
+
+/* fundo geral */
+html.hc body {
+  background: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* header */
+html.hc .sticky {
+  background: var(--bg-color) !important;
+  border-bottom: 1px solid var(--border-soft) !important;
+}
+
+html.hc .search-box {
+  background: #131313 !important;
+  border-color: var(--border-soft) !important;
+}
+
+html.hc #search {
+  color: var(--text-color) !important;
+}
+
+html.hc #search::placeholder {
+  color: #777 !important;
+}
+
+/* side rail */
+html.hc .side-rail {
+  background: transparent !important;
+}
+
+html.hc .side-icon {
+  background: #1C1D1D !important;
+  border-color: var(--border-soft) !important;
+  color: var(--text-color) !important;
+}
+
+html.hc .side-icon:hover {
+  background: #232525 !important;
+}
+
+/* cards */
+html.hc .card {
+  background: var(--card-bg) !important;
+  border-color: var(--border-soft) !important;
+  color: var(--text-color) !important;
+  box-shadow: none !important;
+}
+
+/* títulos */
+html.hc h1,
+html.hc h2,
+html.hc h3 {
+  color: #FFFFFF !important;
+}
+
+/* textos */
+html.hc p,
+html.hc .subtitle,
+html.hc .block-content {
+  color: var(--text-soft) !important;
+}
+
+/* acordeões dos cards */
+html.hc .block button {
+  background: transparent !important;
+  color: var(--text-color) !important;
+  border-color: var(--border-soft) !important;
+}
+
+html.hc .block button:hover {
+  background: #1D1E1E !important;
+}
+
+/* ícones */
+html.hc .icon {
+  color: var(--text-soft) !important;
+}
+
+/* botões */
+html.hc button,
+html.hc .btn {
+  background: #1C1D1D !important;
+  border-color: var(--border-soft) !important;
+  color: var(--text-color) !important;
+}
+
+html.hc button:hover,
+html.hc .btn:hover {
+  background: #262727 !important;
+}
+
+/* botões TTS e print */
+html.hc .btn.icon.tts,
+html.hc .btn.icon.print {
+  background: #1C1D1D !important;
+  border-color: var(--border-soft) !important;
+  color: var(--text-color) !important;
+}
+
+html.hc .btn.icon.tts:hover,
+html.hc .btn.icon.print:hover {
+  background: #252626 !important;
+  border-color: #3A3A3A !important;
+}
+
+/* categorias */
+html.hc .cat-head {
+  background: #1B1C1C !important;
+  border-color: var(--border-soft) !important;
+  color: var(--text-color) !important;
+}
+
+html.hc .cat[data-open="true"] .cat-head {
+  background: #11221B !important; /* leve verde escuro */
+  color: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
+
+/* pills */
+html.hc .pill.lab {
+  background: #11221B !important;
+  border-color: #1D3C2D !important;
+  color: #37D5A0 !important;
+}
+
+html.hc .pill.image {
+  background: #132033 !important;
+  border-color: #24406A !important;
+  color: #7AB7FF !important;
+}
+
+html.hc .pill.meds {
+  background: #2E2410 !important;
+  border-color: #4C3A1A !important;
+  color: #FFDCA8 !important;
+}
+
+/* tabs */
+html.hc .tab {
+  background: #1C1D1D !important;
+  border-color: var(--border-soft) !important;
+  color: var(--text-color) !important;
+}
+
+html.hc .tab.active {
+  background: var(--accent) !important;
+  color: #000 !important;
+}
+
+
+html.hc .block-content {
+  background: #0F0F0F !important;     /* quase preto, igual ao card */
+  color: #EAEAEA !important;          /* texto claro */
+  border-top: 1px solid #2A2A2A !important;
+}
+
+html.hc .collapse {
+  background: #0F0F0F !important;
+}
+
+html.hc .block button {
+  background: #0D0D0D !important;
+  color: #F4F4F4 !important;
+  border-color: #2A2A2A !important;
+}
+
+html.hc .block button:hover {
+  background: #151515 !important;
+}
+
+html.hc .block button.open {
+  background: #151515 !important;
+  color: #10B981 !important;    /* destaque verde elegante */
+}
+
+html.hc .collapse.open > div {
+  background: #0F0F0F !important;
+}
+
+
+html.hc .lang-select {
+  background: #1C1D1D !important;
+  color: #F4F4F4 !important;
+  border-color: #2A2A2A !important;
+}
+
+html.hc .lang-select option {
+  background: #1C1D1D !important;
+  color: #F4F4F4 !important;
+}
+
+/* ======================================
+   5. PAINEL LATERAL ELEGANTE - ESTILO CANVA
+====================================== */
+
+.side-rail {
+  position: fixed;
+  top: 140px;             /* ajusta para alinhar com seu header */
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  z-index: 1000;
+}
+
+/* Estilo de cada ícone */
+.side-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid #b6b6b6;
+  background: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  transition: 0.2s ease;
+}
+
+.side-icon:hover {
+  background: #f3f4f6;
+  transform: translateY(-2px);
+}
+
+/* Bolhinha (tooltip) */
+.side-icon::after {
+  content: attr(data-label);
+  position: absolute;
+  right: 120%;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+
+  background: #111827;
+  color: #f9fafb;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+/* Triângulo da bolha */
+.side-icon::before {
+  content: "";
+  position: absolute;
+  right: 110%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent transparent #111827;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+/* Mostrar bolhinha no hover/focus */
+.side-icon:hover::after,
+.side-icon:hover::before,
+.side-icon:focus-visible::after,
+.side-icon:focus-visible::before {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+
+/* =========================================
+   6. HEADER / BRAND / LOGO / AÇÕES
+   ========================================= */
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: nowrap;
+}
+
+/* LARGURA MÁXIMA CENTRALIZADA */
+.sticky .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+/* LINHA PRINCIPAL DO HEADER */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap; /* permite quebrar linha em telas menores */
+}
+
+/* LOGO + TÍTULO */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 220px;
+}
+
+#brand-logo {
+  height: 70px; 
+  width: auto;
+}
+
+html.hc #brand-logo {
+  content: url("assets/logo.svg") !important;
+  filter: brightness(0) saturate(100%) invert(69%) sepia(35%) saturate(1316%) hue-rotate(108deg) brightness(100%) contrast(96%) !important;
+}
+
+
+.title {
+  font-size: clamp(1.6rem, 2.2vw, 2.4rem);
+  font-family: "Times New Roman", serif;
+  font-weight: 600;
+}
+
+/* LADO DIREITO DO HEADER */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+/* ÁREA DA BUSCA + LUPA */
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1 1 260px;
+  max-width: 480px;
+}
+
+
+/* “pílula” da busca */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+  border: 1px solid #b6b6b6;
+  border-radius: 999px;
+  padding: 0 .75rem;
+  padding-right: .25rem; /* espaço pro microfone */
+  background: #ffffff;
+  width: 320px;
+  overflow: auto;
+  overflow-y: hidden; 
+  max-width: 100%;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  font-size: .95rem;
+  padding: .55rem .5rem;
+  background: transparent;
+   white-space: nowrap;
+  overflow-x: auto;
+}
+
+.search-box input:focus {
+  outline: none;
+}
+
+/* MICROFONE */
+.voice-btn {
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  padding: .25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: inherit;
+  transform: none;
+  text-shadow: none;
+  transition: 0.15s ease;
+}
+
+/* Quando estiver gravando */
+.voice-btn.listening {
+  color: red;
+  transform: scale(1.2);
+  text-shadow: 0 0 5px rgba(255,0,0,0.5);
+}
+
+/* SELECT DE IDIOMA */
+.lang-select {
+  border: 1px solid #b6b6b6;
+  border-radius: 50px;
+  padding: .4rem .9rem;
+  font-size: .9rem;
+  background: white;
+  cursor: pointer;
+}
+
+
+/* =========================================
+   7. INPUTS, SELECT, BOTÕES, SWITCH
+   ========================================= */
+
+.select,
+.btn,
+.input {
+  border: 1px solid #e5e7eb;
+  border-radius: .8rem;
+  background: #fff;
+  padding: .55rem .8rem;
+  font: inherit;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  cursor: pointer;
+}
+
+.btn.icon {
+  padding: .5rem;
+  width: 40px;
+  height: 40px;
+  display: inline-grid;
+  place-items: center;
+}
+
+.btn.primary {
+  background: var(--brand);
+  color: #fff;
+  border-color: var(--brand-dark);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  transition: transform .15s;
+}
+
+.switch {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .9rem;
+  color: var(--muted);
+}
+
+/* =========================================
+   8. HERO (TOPO DA PÁGINA) + TÍTULOS
+   ========================================= */
+
+.hero {
+  display: flex;
+  justify-content: center;
+  padding-top: 2.5rem;  /* distância HEADER → TÍTULO */
+}
+
+.hero-container {
+  max-width: 72rem !important;
+  width: 100%;
+}
+
+/* TÍTULO */
+.hero-title {
+  font-family: var(--title-font);
+  font-weight: 200;
+  font-size: 2.5rem;
+  line-height: 1.15;
+  color: #111;
+  margin: 0 0 2rem;  /* só embaixo */
+  text-align:center;
+}
+
+.hero-title .em {
+  font-weight: 700; /* Bold */
+  font-style: italic;
+}
+
+
+
+/* GALERIA 4 IMAGENS */
+.hero-gallery {
+  max-width: 72rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.hero-gallery img {
+  width: 220px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* MARGENS DOS CARDS*/ 
+
+#lista {
+  max-width: 72rem;      /* largura confortável */
+  margin: 0 auto;        /* centralizado */
+  padding: 0 1rem 3rem;  /* respiro em volta */
+}
+
+
+
+/* =========================================
+   9. BUSCA (LUPA + INPUT GENÉRICO)
+   ========================================= */
+
+.search {
+  position: relative;
+}
+
+.search .input {
+  width: 100%;
+  padding-left: 2.25rem;
+}
+
+.search .icon {
+  position: absolute;
+  left: .65rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+/* =========================================
+   10. CATEGORIAS (COLLAPSIBLE) + GRID DE ITENS
+   ========================================= */
+
+.cat {
+  margin-top: 2rem;
+}
+
+.cat-head {
+  background: #cacaca;
+  border-radius: 1rem 1rem 0 0;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.cat-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.cat .chev {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  opacity: .75;
+  transition: transform .25s ease;
+}
+
+/* seta categoria fechada */
+.cat .chev::after {
+  content: "▼";
+}
+
+/* seta categoria aberta */
+.cat[data-open="true"] .chev::after {
+  content: "►";
+}
+
+/* corpo da categoria (abre/fecha) */
+.cat-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows .28s ease;
+}
+
+.cat[data-open="true"] .cat-body {
+  grid-template-rows: 1fr;
+}
+
+.cat-body > div {
+  min-height: 0;
+}
+
+/* GRID — CARDS EM 2 OU 3 COLUNAS */
+#lista {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1rem 3rem;
+}
+
+#lista {
+  display: grid;
+  gap: 1.25rem;
+}
+
+
+/* =========================================
+   11. BLOCOS INTERNOS DO CARD (ACCORDION)
+   ========================================= */
+
+.block {
+  border-top: 1px dashed #e5e7eb;
+}
+
+.block button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .75rem 1rem;
+  font-weight: 600;
+  background: #ffffff;
+  border: none;
+}
+
+/* seta do bloco (fechado) */
+.block button .chev::after {
+  content: "▸";
+  font-size: 1rem;
+  opacity: .6;
+}
+
+/* seta do bloco (aberto) – botão ganha .open no JS */
+.block button.open .chev::after {
+  content: "▾";
+}
+
+/* área que abre/fecha */
+.collapse {
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows .25s ease;
+}
+
+.collapse.open {
+  grid-template-rows: 1fr;
+}
+
+.collapse > div {
+  min-height: 0;
+}
+
+.block-content {
+  padding: 0 1rem 1rem;
+  color: #334155;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* =========================================
+   12. PILLS / TIPO DE EXAME
+   ========================================= */
+
+.item-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+  padding: 1rem;
+}
+
+/* Pílulas de tipo de exame */
+.pill {
+  font-size: .75rem;
+  padding: .25rem .5rem;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+}
+
+.pill.lab {
+  background: #ecfdf5;
+  color: #065f46;
+  border-color: #a7f3d0;
+}
+
+.pill.image {
+  background: #eff6ff;
+  color: #1e40af;
+  border-color: #bfdbfe;
+}
+
+.pill.meds {
+  background: #fffbeb;
+  color: #92400e;
+  border-color: #fde68a;
+}
+
+
+/* =========================================
+   14. FOOTER
+   ========================================= */
+
+footer {
+  border-top: 1px solid #e5e7eb;
+  color: #070606;
+}
+
+/* =========================================
+   15. RAIL VERTICAL DE ACESSIBILIDADE (CONTRASTE + TTS)
+   ========================================= */
+
+.rail {
+  position: absolute;
+  right: 0.5rem;
+  top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  z-index: 10;
+}
+
+.rail-contrast {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  border: 1px solid #e5e7eb;
+  border-radius: .75rem;
+  padding: .5rem .25rem;
+  background: #fff;
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1.1;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, .06);
+}
+
+.rail-contrast:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+.rail-tts {
+  border: 1px solid #e5e7eb;
+  border-radius: .75rem;
+  padding: .75rem .9rem;
+  font-weight: 700;
+  background: #fff;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, .06);
+}
+
+.rail-tts:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+/* =========================================
+   16. CONTROLES DE FONTE
+   ========================================= */
+
+.font-controls {
+  display: flex;
+  gap: .5rem;
+  justify-content: center;
+}
+
+/* =========================================
+   17. HERO - MÍDIA / BANNER
+   ========================================= */
+
+.media-hero {
+  padding: 1.25rem 1.25rem 0;
+}
+
+.media-box {
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 16 / 6;
+  background: #f3f0f0;
+  border: 1px dashed #e2e8f0;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.media-box img,
+.media-box object {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+
+
+/* =========================================
+   19. OCULTAR TÍTULO E SUBTÍTULO NO HEADER
+   ========================================= */
+
+.brand .title,
+.brand .subtitle {
+  display: none !important;
+}
+
+/* =========================================
+   19.1 BOTÕES DE ÁUDIO / IMPRESSÃO DOS CARDS
+   ========================================= */
+
+/* bolinhas dos cards (Ouvir / Imprimir) com a mesma estética do painel lateral */
+.btn.icon.tts,
+.btn.icon.print {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #151514;
+  display: inline-grid;
+  place-items: center;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* hover bonito */
+.btn.icon.tts:hover,
+.btn.icon.print:hover {
+  background: #ecfdf5;
+  border-color: #10B981;
+  color: #065f46;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.25);
+  transform: translateY(-1px);
+}
+
+/* active */
+.btn.icon.tts:active,
+.btn.icon.print:active {
+  background: #d1fae5;
+  border-color: #059669;
+  box-shadow: 0 0 4px rgba(5, 150, 105, 0.35);
+  transform: translateY(0);
+}
+
+/* quando o áudio estiver tocando (classe .on vem do JS) */
+.btn.icon.tts.on {
+  background: #10B981;
+  border-color: #059669;
+  color: #ffffff;
+}
+
+
+/* =========================================
+   20. MODO DE IMPRESSÃO
+   ========================================= */
+
+@media print {
+  /* fundo branco, sem imagem */
+  html, body {
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* some coisas de navegação / decoração */
+  header,
+  .hero,
+  .side-rail,
+  .rail,
+  footer {
+    display: none !important;
+  }
+
+  /* container principal dos cards ocupa a página toda */
+  #lista {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* garante que TODAS as categorias e blocos fiquem abertos na impressão */
+  .cat-body,
+  .collapse {
+    display: block !important;
+    grid-template-rows: 1fr !important;
+    overflow: visible !important;
+  }
+
+  .cat-body > div,
+  .collapse > div {
+    min-height: auto !important;
+  }
+
+  /* cada card vira um bloco limpo de impressão */
+  .card {
+    box-shadow: none !important;
+    border: 1px solid #000000 !important;
+    background: #ffffff !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+
+  
+
+  .block button {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  /* tira efeito de botão nos ícones de ação */
+  .btn.icon,
+  .btn.icon.tts,
+  .btn.icon.print {
+    box-shadow: none !important;
+    border: 1px solid #cccccc !important;
+    background: #ffffff !important;
+  }
+}
+
+/* =========================================
+   NOVO CARD — VISUAL MODERNO (modelo 2)
+========================================= */
+
+.styled-card {
+  background: #ffffff;
+  border: 1px solid #E5E7EB;
+  border-radius: 18px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .75rem;
+}
+
+.card-title-zone {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.card-tag {
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  border: 1px solid #A7F3D0;
+  background: #ECFDF5;
+  color: #059669;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1F2937;
+}
+
+.card-actions {
+  display: flex;
+  gap: .5rem;
+}
+
+.card-content {
+  margin-top: .75rem;
+}
+
+.card-tags {
+  margin-top: 1rem;
+  display: flex;
+  gap: .4rem;
+  flex-wrap: wrap;
+}
+
+.card-tags span {
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  padding: 2px 8px;
+  font-size: .75rem;
+  border-radius: 6px;
+  color: #374151;
+}
+
+/* =========================================
+   HARMONIZAÇÃO TOTAL DO ESTILO — PROJETO 2025
+========================================= */
+
+/* HEADER – deixa minimalista e coerente com os cards */
+.sticky {
+  background: #ffffff;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.lang-select,
+.search-box {
+  border-color: #D1D5DB !important;
+}
+
+/* HERO – leve, clínico */
+.hero-title {
+  color: #1F2937;
+  font-weight: 300;
+}
+
+.hero-title .em {
+  color: #059669;
+}
+
+/* CATEGORIAS – cartões mãe */
+.cat-head {
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  color: #374151;
+  border-radius: 16px;
+  font-weight: 600;
+  padding: 1rem 1.2rem;
+}
+
+.cat[data-open="true"] .cat-head {
+  background: #ECFDF5;
+  border-color: #A7F3D0;
+  color: #065F46;
+}
+
+/* seta */
+.cat .chev::after {
+  color: #6B7280;
+}
+
+/* GRID – deixa um "respiro" entre card e categoria */
+.grid {
+  margin-top: 1rem;
+}
+
+/* NOVOS ACORDEÕES DOS CARDS – suave e clínico */
+.block {
+  border-top: 1px solid #E5E7EB !important;
+}
+
+.block button {
+  background: transparent !important;
+  color: #374151;
+}
+
+.block button:hover {
+  background: #F3F4F6 !important;
+}
+
+.block button .chev::after {
+  font-size: 1.15rem;
+  opacity: .4;
+}
+
+/* conteúdo interno */
+.block-content {
+  color: #374151 !important;
+  background: #ffffff;
+}
+
+/* BOTÕES DOS CARDS – condizentes com estilo novo */
+.btn.icon.tts,
+.btn.icon.print {
+  background: #ffffff;
+  border: 1px solid #D1D5DB;
+  border-radius: 12px !important;
+  width: 42px;
+  height: 42px;
+  color: #374151;
+}
+
+.btn.icon.tts:hover,
+.btn.icon.print:hover {
+  background: #ECFDF5;
+  border-color: #059669;
+  color: #065F46;
+}
+
+/* TAGS DO CARD */
+.card-tag {
+  background: #ECFDF5 !important;
+  border-color: #A7F3D0 !important;
+  color: #059669 !important;
+}
+
+/* TAGS (hashtags) do card – discretas */
+.card-tags span {
+  background: #F3F4F6 !important;
+  border-color: #E5E7EB !important;
+  color: #374151 !important;
+}
+
+/* CATEGORIAS – pílulas */
+.pill.lab {
+  background: #ECFDF5;
+  border-color: #A7F3D0;
+  color: #065F46;
+}
+
+.pill.image {
+  background: #EFF6FF;
+  border-color: #BFDBFE;
+  color: #1E40AF;
+}
+
+.pill.meds {
+  background: #FFFBEB;
+  border-color: #FDE68A;
+  color: #92400E;
+}
+
+/* GERAL – sombras coerentes */
+.card,
+.styled-card,
+.cat-head {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+
+/* =========================================
+   TABS ALINHADAS COM A LARGURA DOS CARDS
+========================================= */
+
+.tabs-container {
+  max-width: 72rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.tab {
+  flex: 1;                       /* ← mesma largura */
+  min-width: 220px;              /* ← não ficar pequenos demais */
+  padding: .9rem 1rem;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #374151;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,.05);
+  transition: all .18s ease;
+}
+
+.tab:hover {
+  background: #f3f4f6;
+}
+
+.tab.active {
+  background: #10B981;
+  border-color: #10B981;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(16,185,129,.3);
+}
+
+/* ================================
+   FOOTER – MODO CLARO
+================================ */
+footer {
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  padding: 1.5rem 0;
+  color: #1F2937;
+  font-size: 0.95rem;
+}
+
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ================================
+   FOOTER – ALTO CONTRASTE
+================================ */
+html.hc footer {
+  background: #0D0E0E !important;
+  border-top: 1px solid #2A2A2A !important;
+  color: #F4F4F4 !important;
+}
+
+html.hc footer a {
+  color: var(--accent) !important;
+}
+
+/* =========================================================
+   RESPONSIVIDADE TELEFONE
+   ========================================================= */
+/* =========================================
+   HEADER PERFEITO NO MOBILE (600px)
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  /* ----- HEADER ----- */
+  .sticky .container {
+    padding: 1rem .75rem !important;
+  }
+
+  .header-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .9rem;
+    text-align: center;
+  }
+
+  /* LOGO CENTRALIZADO */
+  .brand {
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  #brand-logo {
+    height: 60px !important;
+  }
+
+  /* ----- ÁREA DE AÇÕES ----- */
+  .header-actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* BUSCA */
+  .search-wrapper {
+    width: 100%;
+    max-width: 340px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .search-box {
+    width: 100% !important;
+    max-width: 340px !important;
+  }
+
+  /* SELECT DE IDIOMA — pequeno + elegante + alinhado */
+  .lang-select {
+    font-size: .8rem !important;
+    padding: .35rem .9rem !important;
+    border-radius: 30px !important;
+    max-width: 160px !important;
+  }
+
+  /* ----- BOTOES A+, A-, CONTRASTE ----- */
+
+  .side-rail {
+    position: fixed;
+    top: auto;
+    bottom: 20px;
+    right: -70px;              /* escondido até o gesto */
+    transition: .3s ease;
+  }
+
+  .side-rail.show {
+    right: 10px;               /* aparece quando toca/rola */
+  }
+
+  .side-icon {
+    width: 40px !important;
+    height: 40px !important;
+    font-size: .9rem !important;
+  }
+
+  /* esconder tooltips no mobile */
+  .side-icon::after,
+  .side-icon::before {
+    display: none !important;
+  }
+}
+
+
+@media(max-width: 600px) {
+  .side-rail {
+    right: -70px; /* escondida fora da tela */
+    opacity: .9;
+  }
+
+  .side-rail.show {
+    right: 10px; /* aparece */
+  }
+}
+
+  /* HERO */
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-gallery img {
+    width: 48%;
+    height: 200px;
+  }
+
+  /* 1 card por linha sem distorcer nada */
+  #lista {
+    grid-template-columns: 1fr !important;
+    padding: 0 1rem 3rem;
+  }
+
+  .card {
+    border-radius: 16px;
+  }
+
+  /* Pills e cabeçalhos sem quebrar */
+  .item-head {
+    flex-wrap: wrap;
+    gap: .5rem;
+  }
+
+  /* Tabs elegantes como desktop */
+  .tabs {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.tab {
+  flex: 1;
+  min-width: 220px;
+  text-align: center;
+}
+  /* Footer elegante */
+  footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
