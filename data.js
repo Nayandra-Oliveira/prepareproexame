@@ -258,15 +258,43 @@ export const DATA = {
       tags: ["laxante", "preparo"],
       blocks: {
         prep:
-          "Hidrate-se bem (250–500 mL de água) nas 1–2 horas anteriores.",
-        during:
-          "Pode causar cólicas e evacuação rápida.",
-        after:
-          "Beber água para evitar desidratação.",
+          "O Fleet Enema provoca evacuação rápida por aumento da osmolaridade intestinal.\n\n" +
+          "Antes do uso:\n" +
+          "• Hidrate-se bem (250–500 mL de água).\n" +
+          "• Evite refeições gordurosas nas horas anteriores.\n" +
+          "• Evite usar se houver desidratação, vômitos intensos ou dor abdominal não explicada.\n" +
+          "• Contraindicado para insuficiência renal, insuficiência cardíaca e megacólon.\n",
+        during:  
+        "É esperado sentir cólicas, distensão e forte urgência evacuatória.\n\n" +
+        "Mantenha-se próximo ao banheiro, pois a evacuação é rápida e intensa.\n\n" +
+        "Aplique conforme instruções da bula:\n" +
+        "• Retirar a tampa protetora,\n" +
+        "• Lubrificar a ponta,\n" +
+        "• Inserir suavemente no reto,\n" +
+        "• Apertar o frasco COMPLETO, mantendo a compressão ao retirar.\n\n" +
+        "Se houver dor intensa, sangramento ou incapacidade de reter a solução por alguns segundos, interrompa e procure orientação.",
+         after:
+          "Reponha líquidos após o uso (300–500 mL de água nas primeiras horas).\n\n" +
+          "Evite repetir a dose no mesmo dia.\n" +
+          "Prefira alimentos leves nas próximas refeições (sopas, frutas, arroz).\n" +
+          "Observe sinais de desidratação: boca seca, tontura, fraqueza.\n" +
+          "Se houver irritação anal, pode usar pomada calmante (ex.: óxido de zinco).\n",
         risks:
-          "Pode alterar exames de eletrólitos.",
+         "Se usado incorretamente, pode causar alteração de eletrólitos:\n" +
+          "• Hipernatremia\n" +
+          "• Hipocalcemia\n" +
+          "• Hiperfosfatemia\n" +
+          "• Hipopotassemia\n\n" +
+          "Risco maior em crianças, idosos e pessoas com problemas renais.\n" +
+          "Pode interferir em exames laboratoriais de eletrólitos.\n" +
+          "Raramente, pode ocorrer insuficiência renal aguda.\n",
         tips:
-          "Vídeo: Como funciona um enema — https://www.youtube.com/watch?v=GccT0BmV5xg"
+            "Use lubrificante na ponta para reduzir desconforto.\n" +
+             "Realize o procedimento deitado sobre o lado esquerdo.\n" +
+             "Tente reter a solução por 2–3 minutos antes de evacuar.\n" +
+             "Evite uso noturno.\n" +
+             "Não utilize mais de 1 dose em 24h.\n" +
+             "Vídeo recomendado: https://www.youtube.com/watch?v=GccT0BmV5xg\n"   
       }
     },
 
@@ -300,7 +328,6 @@ export const DATA = {
 
   /* ======================================================
      🇺🇸 ENGLISH
-     (traduções curtas e equivalentes)
   ====================================================== */
   en: [
     {
@@ -412,11 +439,39 @@ export const DATA = {
       category: "meds",
       tags: ["laxative"],
       blocks: {
-        prep: "Use as prescribed.",
-        during: "May cause cramping.",
-        after: "Hydrate well.",
-        risks: "May affect electrolytes.",
-        tips: "Video:\nhttps://www.youtube.com/watch?v=GccT0BmV5xg"
+        prep: "Fleet Enema works by drawing water into the intestines, causing rapid evacuation.\n\n" +
+          "Before use:\n" +
+          "• Drink 250–500 mL of water to ensure hydration.\n" +
+          "• Avoid heavy or fatty meals before using the enema.\n" +
+          "• Do not use if you have dehydration, severe vomiting, or unexplained abdominal pain.\n" +
+          "• Contraindicated in kidney disease, heart failure, and megacolon.\n",
+        during: "Cramping, bloating, and strong urgency to evacuate are expected.\n\n" +
+          "Stay near a bathroom, as evacuation happens quickly and intensely.\n\n" +
+          "Follow the instructions from the package insert:\n" +
+          "• Remove the protective cap,\n" +
+          "• Lubricate the tip,\n" +
+          "• Insert gently into the rectum,\n" +
+          "• Squeeze the entire bottle, keeping it compressed while removing the tip.\n\n" +
+          "If you experience severe pain, bleeding, or inability to retain the solution even briefly, stop and seek medical advice.\n",
+        after:  "Drink 300–500 mL of water after use to rehydrate.\n\n" +
+             "Do not repeat the dose on the same day.\n" +
+             "Eat light meals afterward (soups, fruits, rice).\n" +
+             "Watch for signs of dehydration: dry mouth, dizziness, weakness.\n" +
+             "If irritation occurs, a soothing ointment may be used (e.g., zinc oxide).\n",
+         risks: "Incorrect use may cause electrolyte disturbances:\n" +
+                "• Hypernatremia\n" +
+                "• Hypocalcemia\n" +
+                "• Hyperphosphatemia\n" +
+                "• Hypokalemia\n\n" +
+                "Higher risk in children, older adults, and people with kidney problems.\n" +
+                "May alter laboratory results related to electrolytes.\n" +
+                "In rare cases, may cause acute kidney injury.\n",
+         tips: "Apply a lubricant to the tip to reduce discomfort.\n" +
+                "Perform the procedure lying on your left side.\n" +
+                "Try to retain the solution for 2–3 minutes before evacuating.\n" +
+                "Avoid using it at night.\n" +
+                "Do not use more than 1 dose in 24 hours.\n" +
+                "Recommended video: https://www.youtube.com/watch?v=GccT0BmV5xg\n"
       }
     },
 
@@ -546,11 +601,41 @@ export const DATA = {
       category: "meds",
       tags: ["laxante"],
       blocks: {
-        prep: "Use según indicación.",
-        during: "Puede causar cólicos.",
-        after: "Hidratación.",
-        risks: "Puede alterar electrolitos.",
-        tips: "Video:\nhttps://www.youtube.com/watch?v=GccT0BmV5xg"
+        prep: "El Fleet Enema actúa atrayendo agua hacia los intestinos, lo que provoca una evacuación rápida.\n\n" +
+             "Antes de usarlo:\n" +
+             "• Beba 250–500 mL de agua para mantenerse hidratado.\n" +
+             "• Evite comidas pesadas o muy grasosas antes del enema.\n" +
+             "• No lo use si presenta deshidratación, vómitos intensos o dolor abdominal sin causa definida.\n" +
+             "• Contraindicado para personas con enfermedad renal, insuficiencia cardíaca o megacolon.\n",
+
+        during: "Es esperado sentir cólicos, distensión y una fuerte urgencia para evacuar.\n\n" +
+                "Permanezca cerca del baño, ya que la evacuación ocurre de forma rápida e intensa.\n\n" +
+                "Siga las instrucciones del prospecto:\n" +
+                "• Retire la tapa protectora,\n" +
+                "• Lubrique la punta,\n" +
+                "• Inserte suavemente en el recto,\n" +
+                "• Apriete todo el frasco, manteniéndolo comprimido al retirarlo.\n\n" +
+                "Si presenta dolor intenso, sangrado o incapacidad para retener la solución incluso por pocos segundos, suspenda el uso y busque orientación.\n",
+
+        after: "Beba 300–500 mL de agua después del uso para rehidratarse.\n\n" +
+                "No repita la dosis en el mismo día.\n" +
+                "Prefiera comidas livianas después del procedimiento (sopas, frutas, arroz).\n" +
+                "Observe signos de deshidratación: boca seca, mareos, debilidad.\n" +
+                "Si ocurre irritación anal, puede usar una pomada calmante (p. ej., óxido de zinc).\n",
+        risks:  "El uso incorrecto puede causar alteraciones de electrolitos:\n" +
+                "• Hipernatremia\n" +
+                "• Hipocalcemia\n" +
+                "• Hiperfosfatemia\n" +
+                "• Hipopotasemia\n\n" +
+                "Mayor riesgo en niños, ancianos y personas con problemas renales.\n" +
+                "Puede alterar resultados de laboratorio relacionados con electrolitos.\n" +
+                "En casos raros, puede causar lesión renal aguda.\n",
+        tips: "Utilice lubricante en la punta para reducir molestias.\n" +
+                "Realice el procedimiento recostado sobre el lado izquierdo.\n" +
+                "Intente retener la solución por 2–3 minutos antes de evacuar.\n" +
+                "Evite usarlo por la noche.\n" +
+                "No utilice más de 1 dosis en 24 horas.\n" +
+                "Video recomendado: https://www.youtube.com/watch?v=GccT0BmV5xg\n"
       }
     },
 
