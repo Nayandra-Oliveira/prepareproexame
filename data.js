@@ -258,7 +258,8 @@ export const DATA = {
       tags: ["laxante", "preparo"],
       blocks: {
         prep:
-          "Uso conforme orientação médica. Hidratação é essencial.",
+          "Hidrate-se bem (250–500 mL de água) nas 1–2 horas anteriores, conforme recomendado em literatura para enemas fosfatados.",
+          "Evite refeições muito gordurosas no período anterior ao uso, pois podem aumentar náuseas e desconforto.Contraindicações importantes (segundo bula): insuficiência renal, insuficiência cardíaca congestiva, megacólon, náuseas/vômitos intensos, desidratação, dor abdominal sem causa definida.",
         during:
           "Pode causar cólicas e evacuação rápida.",
         after:
